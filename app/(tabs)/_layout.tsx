@@ -2,7 +2,7 @@ import TabBarIcon from "@components/atoms/TabBarIcon";
 import { Tabs } from "expo-router";
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "blue" }}>
+    <Tabs screenOptions={{ tabBarActiveTintColor: "blue", headerShown: false }}>
       <Tabs.Screen
         name="wishlist"
         options={{
@@ -33,7 +33,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
+          title: "Profile",
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="account" color={color} />
           ),
