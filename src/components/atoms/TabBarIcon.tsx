@@ -1,6 +1,6 @@
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
-export default function TabBarIcon({
+export default function Poster({
   name,
   color,
 }: {

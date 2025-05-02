@@ -44,3 +44,5 @@ scripts/importGenres.js
 scripts/mapCsv.js
 scripts/watched.csv
 scripts/posterPath.js
+
+android/
