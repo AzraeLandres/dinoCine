@@ -1,33 +1,39 @@
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function TabBarIcon({
   name,
   color,
   focused,
-  isFab = false,
 }: {
   name: keyof typeof MaterialCommunityIcons.glyphMap;
   color: string;
   focused: boolean;
-  isFab?: boolean;
 }) {
-  if (isFab) {
-    return (
-      <View
-        style={{
-          width: 50,
-          height: 50,
-          borderRadius: 32,
-          backgroundColor: focused ? "#A7A4EB" : "#B3AEE4",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <MaterialCommunityIcons size={35} name={name} color={color} />
-      </View>
-    );
-  }
-
-  return <MaterialCommunityIcons size={35} name={name} color={color} />;
+  return (
+    <View
+      style={[
+        styles.background,
+        focused ? styles.backgroundFocused : styles.backgroundUnfocused,
+      ]}
+    >
+      <MaterialCommunityIcons size={35} name={name} color="white" />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  background: {
+    width: 80,
+    height: 55,
+    borderRadius: 60,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  backgroundFocused: {
+    backgroundColor: "#b3aee4",
+  },
+  backgroundUnfocused: {
+    backgroundColor: "transparent",
+  },
+});

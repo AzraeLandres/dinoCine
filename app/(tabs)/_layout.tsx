@@ -7,7 +7,7 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#4A7D52",
+        tabBarActiveTintColor: "#b3aee4",
         tabBarInactiveTintColor: "white",
         tabBarStyle: {
           height: 130,
@@ -45,7 +45,7 @@ export default function TabLayout() {
         options={{
           title: "Add Content",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name="plus" color={color} focused={focused} isFab />
+            <TabBarIcon name="plus" color={color} focused={focused} />
           ),
         }}
       />
