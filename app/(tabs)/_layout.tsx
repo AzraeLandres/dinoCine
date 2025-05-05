@@ -1,14 +1,34 @@
+import CustomTabBarBackground from "@/src/components/atoms/customTabBarBackground";
 import TabBarIcon from "@components/atoms/TabBarIcon";
+import Header from "@components/molecules/Header";
 import { Tabs } from "expo-router";
+
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: "blue", headerShown: false }}>
+    <Tabs
+      screenOptions={{
+        tabBarActiveTintColor: "#4A7D52",
+        tabBarInactiveTintColor: "white",
+        tabBarStyle: {
+          height: 110,
+          elevation: 0,
+        },
+        tabBarIconStyle: {
+          height: 80,
+          marginTop: 20,
+        },
+        tabBarShowLabel: false,
+        tabBarBackground: () => <CustomTabBarBackground />,
+
+        header: () => <Header />,
+      }}
+    >
       <Tabs.Screen
-        name="wishlist"
+        name="home"
         options={{
-          title: "Wishlist",
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="book-outline" color={color} />
+          title: "Profile",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name="home-variant" color={color} focused={focused} />
           ),
         }}
       />
@@ -16,8 +36,8 @@ export default function TabLayout() {
         name="content"
         options={{
           title: "Content",
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="movie-open" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name="movie-open" color={color} focused={focused} />
           ),
         }}
       />
@@ -25,17 +45,17 @@ export default function TabLayout() {
         name="addContent"
         options={{
           title: "Add Content",
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="plus-circle" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name="plus" color={color} focused={focused} isFab />
           ),
         }}
       />
       <Tabs.Screen
-        name="home"
+        name="wishlist"
         options={{
-          title: "Profile",
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="account" color={color} />
+          title: "Wishlist",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name="book-outline" color={color} focused={focused} />
           ),
         }}
       />
@@ -43,7 +63,9 @@ export default function TabLayout() {
         name="settings"
         options={{
           title: "Settings",
-          tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={color} />,
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name="cog" color={color} focused={focused} />
+          ),
         }}
       />
     </Tabs>

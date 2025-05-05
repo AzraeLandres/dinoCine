@@ -48,3 +48,71 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+dinoCine/
+├─ .expo/
+│ ├─ types/
+│ │ └─ router.d.ts
+│ ├─ web/
+│ │ └─ cache/
+│ ├─ devices.json
+│ └─ README.md
+├─ .vscode/
+│ └─ settings.json
+├─ app/
+│ ├─ (tabs)/
+│ │ ├─ \_layout.tsx
+│ │ ├─ addContent.tsx
+│ │ ├─ content.tsx
+│ │ ├─ home.tsx
+│ │ ├─ settings.tsx
+│ │ └─ wishlist.tsx
+│ ├─ \_layout.tsx
+│ └─ index.tsx
+├─ assets/
+│ ├─ fonts/
+│ │ └─ Frogie-Regular.ttf
+│ └─ images/
+│ ├─ dinoCineLogo.png
+│ └─ splash-icon.png
+├─ scripts/
+│ ├─ import_content.sql
+│ ├─ import_contentGenre.sql
+│ ├─ import_genres.sql
+│ ├─ import_userContent.sql
+│ ├─ importGenres.js
+│ ├─ mapCsv.js
+│ ├─ posterPath.js
+│ ├─ reset-project.js
+│ ├─ update_content_posters.sql
+│ └─ watched.csv
+├─ src/
+│ ├─ components/
+│ │ ├─ atoms/
+│ │ │ ├─ LogoIcon.tsx
+│ │ │ ├─ Poster.tsx
+│ │ │ └─ TabBarIcon.tsx
+│ │ ├─ layout/
+│ │ ├─ molecules/
+│ │ │ └─ Header.tsx
+│ │ ├─ organisms/
+│ │ └─ templates/
+│ ├─ hooks/
+│ ├─ lib/
+│ │ └─ supabase.ts
+│ └─ screens/
+│ ├─ AddContentScreen.tsx
+│ └─ HomeScreen.tsx
+├─ .gitignore
+├─ app.json
+├─ babel.config.js
+├─ eslint.config.js
+├─ expo-env.d.ts
+├─ global.css
+├─ metro.config.js
+├─ nativewind-env.d.ts
+├─ package-lock.json
+├─ package.json
+├─ README.md
+├─ tailwind.config.js
+└─ tsconfig.json

@@ -1,7 +1,7 @@
 import { supabase } from "@lib/supabase";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import { Stack } from "expo-router";
-
+import "nativewind";
 export default function RootLayout() {
   return (
     <SessionContextProvider supabaseClient={supabase}>
