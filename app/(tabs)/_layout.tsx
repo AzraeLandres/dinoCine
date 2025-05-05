@@ -10,12 +10,11 @@ export default function TabLayout() {
         tabBarActiveTintColor: "#4A7D52",
         tabBarInactiveTintColor: "white",
         tabBarStyle: {
-          height: 110,
+          height: 130,
           elevation: 0,
         },
         tabBarIconStyle: {
-          height: 80,
-          marginTop: 20,
+          height: 145,
         },
         tabBarShowLabel: false,
         tabBarBackground: () => <CustomTabBarBackground />,
