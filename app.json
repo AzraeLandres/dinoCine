@@ -28,8 +28,7 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 300
         }
-      ],
-      "expo-font"
+      ]
     ],
     "experiments": {
       "typedRoutes": true
